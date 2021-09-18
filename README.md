@@ -4,7 +4,7 @@
 
 [Click here to view the live project :link:](https://)
 
-The Hangar is a project 
+The Hangar is a project for an Aircraft Model Store e-commerce website.
 
 # Table Of Contents
 
@@ -382,11 +382,11 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 ## Content
 
--  The  details and description were taken from [Wi](https://)
+-  The  details and descriptions of the products were taken from [Wikipedia](https://www.wikipedia.org/).
 
 ## Media
 
--  The media for the  was taken from [W](https://)
+-  The media for the  was taken from three different websites that sell Aircraft Models: [Revell](https://www.revell.de/), [Aircraft Model Store](https://www.aircraftmodelstore.co.uk/) and [Drones Xpress](https://ie.drones-xpress.com/).
 
 ## Acknowledgements
 
