@@ -17,3 +17,18 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
+class Manufacturer(models.Model):
+    name = models.CharField(max_length=50, null=False, blank=False)
+    product = models.ForeignKey('Product', null=True, blank=True, on_delete=models.SET_NULL)
+
+    def __str__(self):
+        return self.name
+
+class Type(models.Model):
+    name = models.CharField(max_length=254, null=False, blank=False)
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    thrust = models.CharField(max_length=254)
+
+    def __str__(self):
+        return self.name
