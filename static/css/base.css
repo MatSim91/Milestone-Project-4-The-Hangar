@@ -3,9 +3,45 @@ html {
 }
 
 body {
-    background: url('/media/the_hangar.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #000000;
     font-family: 'Oxygen';
+    color: #000000;
 }
+
+/*--- Hero Image ---*/
+
+.hero-image {
+    height: 100vh;
+    background: url('/media/the_hangar.jpg') no-repeat bottom right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: calc(100vh - 33px);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.page-title {
+    font-size: 4vw;
+}
+
+.center-welcome-message {
+    text-align: center;
+}
+
+.test {
+    margin-top: 300px;
+}
+
+/*---  ---*/
