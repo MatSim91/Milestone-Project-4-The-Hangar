@@ -271,8 +271,12 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 ## Bugs and Fixes
 
-1.
-	- 1.1 **Fix:** 
+1. After adding the search functionality every time I was searching for anything it was displaying all the products.
+	- 1.1 **Fix:** The indendation of both lines (lines followed below) was wrong. I have to remove one indendation level: 
+    ```
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
+    ```
 
 2. 
     - 2.1 **Fix:** 
