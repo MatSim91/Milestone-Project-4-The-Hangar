@@ -382,11 +382,11 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 ## Content
 
--  The  details and descriptions of the products were taken from [Wikipedia](https://www.wikipedia.org/).
+-  The  details and descriptions of the products were taken from [Wikipedia](https://www.wikipedia.org/) and from [Revell](https://www.revell.de/).
 
 ## Media
 
--  The media for the  was taken from three different websites that sell Aircraft Models: [Revell](https://www.revell.de/), [Aircraft Model Store](https://www.aircraftmodelstore.co.uk/) and [Drones Xpress](https://ie.drones-xpress.com/).
+-  The media for the  was taken from three different websites that sell Aircraft Models: [Revell](https://www.revell.de/).
 
 ## Acknowledgements
 
