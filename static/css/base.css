@@ -6,7 +6,7 @@ html {
 
 body {
 	font-family: 'Oxygen';
-	color: #FFFFFF;
+	color: #000000;
     background-color: #6C757E;
 }
 
@@ -32,6 +32,10 @@ hr {
     color: #000000;
     background-color:  #000000;
     border-color: #000000;
+}
+
+.border-white {
+	border: solid 1px #ffffff;
 }
 
 /*--- Hero Image ---*/
@@ -97,4 +101,9 @@ hr {
         padding-top: 164px;
     }
 }
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
 }
