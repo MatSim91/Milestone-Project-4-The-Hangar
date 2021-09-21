@@ -6,6 +6,8 @@ from .models import Product, Category, Manufacturer, Type
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'category',
+        'type',
+        'manufacturer',
         'name',
         'description',
         'price',
@@ -22,13 +24,12 @@ class CategoryAdmin(admin.ModelAdmin):
 class ManufacturerAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'product',
+        'country',
     )
 
 class TypeAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'category',
         'thrust',
     )
 
