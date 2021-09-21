@@ -278,8 +278,8 @@ A brief overview of the languages, frameworks, and other tools I've used on this
             products = products.filter(queries)
     ```
 
-2. 
-    - 2.1 **Fix:** 
+2. After adding the search functionality for product types the server was running fine and not showing any error, but everytime I selecting the product type like "Jets" on the navbar it wasn't showing anything.
+    - 2.1 **Fix:** I have to add a Friendly name to models.py so while selecting the type on navbar would retrieve the type name all in lowercase and show the friendly name with the first letter capitalized.
 
 3.
     - 3.1 **Fix:** 
