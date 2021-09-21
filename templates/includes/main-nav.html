@@ -27,8 +27,8 @@
                 Helicopters
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="helicoper-link">
-                <a href="" class="dropdown-item">Turbine</a>
-                <a href="" class="dropdown-item">Piston</a>
+                <a href="{% url 'products' %}?type=turbine" class="dropdown-item">Turbine</a>
+                <a href="{% url 'products' %}?type=piston" class="dropdown-item">Piston</a>
             </div>
         </li>
 
@@ -37,8 +37,8 @@
                 Drones
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="drone-link">
-                <a href="" class="dropdown-item">Single-Rotor</a>
-                <a href="" class="dropdown-item">Multi-Rotor</a>
+                <a href="{% url 'products' %}?type=single-rotor" class="dropdown-item">Single-Rotor</a>
+                <a href="{% url 'products' %}?type=multi-rotor" class="dropdown-item">Multi-Rotor</a>
             </div>
         </li>
     </ul>

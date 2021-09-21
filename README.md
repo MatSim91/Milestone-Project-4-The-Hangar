@@ -390,7 +390,7 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 ## Media
 
--  The media for the  was taken from three different websites that sell Aircraft Models: [Revell](https://www.revell.de/).
+-  The media for the  was taken from a website that sell Aircraft Models: [Revell](https://www.revell.de/).
 
 ## Acknowledgements
 
