@@ -32,6 +32,10 @@ class Manufacturer(models.Model):
         return self.name
 
 class Type(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Types'
+
     name = models.CharField(max_length=50, null=False, blank=False)
     thrust = models.CharField(max_length=30)
 
