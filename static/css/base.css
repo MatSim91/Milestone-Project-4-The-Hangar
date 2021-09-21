@@ -42,6 +42,27 @@ hr {
 	border: solid 1px #000000;
 }
 
+/*--- Top Navbar ---*/
+
+.the-hangar-icon:hover {
+	color: rgb(211, 211, 211) !important;
+}
+
+.bg-secondary {
+	background-color: #000000 !important;
+}
+
+.nav-sections:hover {
+	color: #000000 !important;
+	background-color: white !important;
+}
+
+.nav-icons:hover {
+	color: #000000;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+
 /*--- Hero Image ---*/
 
 .hero-image {
