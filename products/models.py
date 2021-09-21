@@ -32,12 +32,12 @@ class Manufacturer(models.Model):
         return self.name
 
 class Type(models.Model):
-
-    class Meta:
-        verbose_name_plural = 'Types'
-
     name = models.CharField(max_length=50, null=False, blank=False)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
     thrust = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
