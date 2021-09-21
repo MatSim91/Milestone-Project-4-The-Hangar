@@ -14,7 +14,18 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3 text-black">
-                <h2>Products</h2>
+                <h1 class="font-weight-bold">Our Aircrafts</h1>
+                    <div class="w-20 p-2 mt-2 badge badge-white text-black">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-pill border border-{% if sorting != 'None_None' %}info{% else %}dark{% endif %}">
+                            <option class="text-black text-center" value="reset" {% if sorting == 'None_None' %}selected{% endif %}>Sort by</option>
+                            <option class="text-black" value="price_asc" {% if sorting == 'price_asc' %}selected{% endif %}>Price Ascending</option>
+                            <option class="text-black" value="price_desc" {% if sorting == 'price_desc' %}selected{% endif %}>Price Descending</option>
+                            <option class="text-black" value="category_asc" {% if sorting == 'category_asc' %}selected{% endif %}>Category Ascending</option>
+                            <option class="text-black" value="category_desc" {% if sorting == 'category_desc' %}selected{% endif %}>Category Descending</option>
+                            <option class="text-black" value="name_asc" {% if sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option class="text-black" value="name_desc" {% if sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                        </select>
+                    </div>
                 <hr>
             </div>
         </div>
@@ -35,13 +46,20 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    <h4 class="mb-0 font-weight-bold">{{ product.name }}</h4>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
                                             <p class="mb-0 text-left">{{ product.type.friendly_name }} {{ product.category }}</p>
                                             <p class="lead mb-0 text-left font-weight-bold">€ {{ product.price }}</p>
+                                            {% if product.category %}
+                                            <p class="mt-1 mb-0 ">
+                                                <a class="text-black" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                    <i class="fas fa-tags mr-1"></i>{{ product.category }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>

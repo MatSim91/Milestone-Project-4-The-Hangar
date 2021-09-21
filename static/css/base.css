@@ -15,7 +15,7 @@ body {
 }
 
 .text-black {
-	color: #000000;
+	color: #000000 !important;
 }
 
 .overlay {
@@ -102,8 +102,6 @@ hr {
 
 
 /*---  ---*/
-
-
 
 
 /*--- Media Queries ---*/
