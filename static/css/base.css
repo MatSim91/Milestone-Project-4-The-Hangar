@@ -38,6 +38,10 @@ hr {
 	border: solid 1px #ffffff;
 }
 
+.border-black {
+	border: solid 1px #000000;
+}
+
 /*--- Hero Image ---*/
 
 .hero-image {
