@@ -19,7 +19,7 @@
             {% for t in current_types %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?type={{ t.name }}">
                 <span
-                    class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ t.friendly_name }}</span>
+                    class="p-2 mt-2 badge badge-white text-black rounded-pill border border-dark">{{ t.friendly_name }}</span>
             </a>
             {% endfor %}
 
