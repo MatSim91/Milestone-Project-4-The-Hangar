@@ -14,6 +14,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3 text-black">
+            
+            <br>
             <h1 class="font-weight-bold">Our Aircrafts</h1>
 
             {% for t in current_types %}
@@ -45,6 +47,12 @@
             <hr>
         </div>
     </div>
+    <div class="container">
+        <div class="row justify-content-center">
+          <h4 class="my-1 alert alert-success font-weight-bold text-center">All orders of €{{ free_delivery_threshold }} or more with FREE Delivery!</h4>
+        </div>
+      </div>
+      <br>
     <div class="row">
         <div class="product-container col-10 offset-1 text-black">
             <div class="row mt-1 mb-2"></div>

@@ -116,8 +116,8 @@ hr {
 /*---  ---*/
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+    background: #000000 !important;
+    color: #ffffff !important;
 }
 
 .to-top-button {
