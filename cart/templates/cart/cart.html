@@ -24,7 +24,66 @@
         <div class="col">
             {% if cart_items %}
             <div class="table-responsive rounded"></div>
-                {{ cart_items }}
+            <table class="table table-sm table-borderless">
+                <thead class="text-black">
+                    <tr>
+                        <th scope="col">Products:</th>
+                        <th scope="col"></th>
+                        <th scope="col">Price:</th>
+                        <th scope="col">Qty:</th>
+                        <th scope="col">Subtotal:</th>
+                    </tr>
+                </thead>
+
+                {% for item in cart_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0 font-weight-bold">{{ item.product.name }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">€{{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <p class="my-0">{{ item.quantity }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">€{{ item.product.price }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="5" class="pt-5 text-right">
+                        <h6><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
+                        <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                        <h4 class="mt-4 alert alert-dark"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                        {% if free_delivery_delta > 0 %}
+                            <p class="mb-1 text-danger">
+                                You can get a free delivery by spending <strong>€{{ free_delivery_delta }}</strong> more!
+                            </p>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="text-right">
+                        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase badge text-black rounded-pill border border-dark">Keep Shopping</span>
+                        </a>
+                        <a href="" class="btn btn-black rounded-0 btn-lg">
+                            <span class="rounded-pill border border-dark text-uppercase px-2 add-button font-weight-bold">Proceed to Checkout</span>
+                            <span class="icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
             {% else %}
             <p class="lead mb-5">Your cart is empty.</p>
             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg category-badge">
