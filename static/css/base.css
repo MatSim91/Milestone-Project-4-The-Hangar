@@ -115,6 +115,28 @@ hr {
 
 /*---  ---*/
 
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.to-top-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.to-top-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.to-top-link:hover {
+	text-decoration: none;
+}
 
 /*--- Media Queries ---*/
 

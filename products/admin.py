@@ -19,6 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'name',
+        'friendly_name',
     )
 
 class ManufacturerAdmin(admin.ModelAdmin):
