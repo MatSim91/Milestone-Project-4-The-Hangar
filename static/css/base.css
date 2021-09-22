@@ -63,6 +63,18 @@ hr {
 	border-radius: 5px;
 }
 
+.mobile-icons {
+	color: #ffffff !important;
+}
+
+.navbar-toggler-icon {
+	background-color: #ffffff;
+}
+
+.navbar-toggler {
+	border: solid 1px white !important;
+}
+
 /*--- Hero Image ---*/
 
 .hero-image {
