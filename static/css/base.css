@@ -42,6 +42,39 @@ hr {
 	border: solid 1px #000000;
 }
 
+.badge:hover {
+	background: #000000 !important;
+    color: #ffffff !important;
+}
+
+a.category-badge > span.badge:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+.add-button:hover {
+	background: #000000 !important;
+    color: #ffffff !important;
+}
+
+.to-top-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.to-top-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.to-top-link:hover {
+	text-decoration: none;
+}
+
 /*--- Top Navbar ---*/
 
 .the-hangar-icon:hover {
@@ -115,28 +148,9 @@ hr {
 
 /*---  ---*/
 
-a.category-badge > span.badge:hover {
-    background: #000000 !important;
-    color: #ffffff !important;
-}
 
-.to-top-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
 
-.to-top-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
 
-.to-top-link:hover {
-	text-decoration: none;
-}
 
 /*--- Media Queries ---*/
 
@@ -164,3 +178,4 @@ a.category-badge > span.badge:hover {
         padding-top: 116px;
     }
 }
+
