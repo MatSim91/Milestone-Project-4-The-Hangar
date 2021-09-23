@@ -75,6 +75,10 @@ a.category-badge > span.badge:hover {
 	text-decoration: none;
 }
 
+.set-max-space {
+	max-width: 150px;
+}
+
 /*--- Top Navbar ---*/
 
 .the-hangar-icon:hover {
