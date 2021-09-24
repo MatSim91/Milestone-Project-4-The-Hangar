@@ -154,7 +154,22 @@ a.category-badge > span.badge:hover {
 
 
 
+/*--- Toasts ---*/
 
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.toast-overflow {
+    overflow: visible;
+}
+
+.toast-height {
+    height: 2px;
+}
 
 /*--- Media Queries ---*/
 
