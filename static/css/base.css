@@ -10,6 +10,10 @@ body {
     background-color: #6C757E;
 }
 
+.card-body {
+	background-color: transparent;
+}
+
 .text-white {
 	color: #FFFFFF;
 }
@@ -149,6 +153,9 @@ a.category-badge > span.badge:hover {
 	margin-top: 300px;
 }
 
+.redirect-message {
+	font-size: 20px;
+}
 
 /*---  ---*/
 

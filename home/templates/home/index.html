@@ -1,4 +1,43 @@
-{% extends "base.html" %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    {% block meta %}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block corejs %}
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://kit.fontawesome.com/d972b5bebb.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>The Hangar {% block extra_title %}{% endblock %}</title>
+</head>
 {% load static %}
 
 {% block page_header %}
@@ -16,13 +55,45 @@
         <div class="col col-12 col-md-12 my-auto center-welcome-message">
             <div class="display-4 text-white test">
             <h1 class="page-title">The Hangar</h1>
+
+            <audio id="my_audio" src="assets/audio/airplane.mp3" loop="loop"></audio>
+            
+            <p>
+                <audio id="airplane-sound" src="media/audio/airplane.mp3" preload="auto"></audio>
+                <a class="btn btn-light font-weight-bold" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="playMusic" onclick="playMusic()">
+                  Click Here to Request Access
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <a class="btn btn btn-success btn-lg rounded-pill font-weight-bold" href="{% url 'products' %}" role="button">Access Granted <i class="fas fa-angle-double-right"></i></a>
+                    <p class="redirect-message mt-3">You will be redirected in 15 seconds...</p>
+                </div>
+              </div>
+
             <br>
-            <br>
-            <h4>
-                <a class="btn btn-outline-light btn-lg rounded-pill" href="{% url 'products' %}" role="button">Access Granted <i class="fas fa-angle-double-right"></i></a>
-            </h4>
         </div>
     </div>
 </div>
 </div>
 {% endblock %}
+
+{% block postloadjs %}
+<script type="text/javascript">
+    var gameMusic = document.getElementById("airplane-sound")
+
+    document.getElementById("airplane-sound").loop = true;
+
+    function playMusic() {
+        gameMusic.play();
+    }
+
+    setTimeout(function(){
+            window.location.href = "{% url 'products' %}";
+         }, 22000);
+</script>
+{% endblock %}
+
+</body>
+
+</html>
