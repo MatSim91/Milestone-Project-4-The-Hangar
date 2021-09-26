@@ -31,6 +31,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -40,7 +41,6 @@
 </head>
 
 <body>
-    <audio id="airplane" src="media/audio/airplane.mp3" preload="auto"></audio>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-secondary pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -65,7 +65,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_cart' %}">
+                        <a class="{% if grand_total %}text-success font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_cart' %}">
                             <div class="text-center nav-icons">
                                 <div><i class="fas fa-shopping-cart fa-2x p-1"></i></div>
                             </div>
@@ -131,9 +131,7 @@
 
     {% block postloadjs %}
     <script type="text/javascript">
-        var airplaneSound = document.getElementById("airplane");
-
-        document.getElementById("airplane").autoplay = true;
+        $('.toast').toast('show');
     </script>
     {% endblock %}
 
