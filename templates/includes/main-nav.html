@@ -1,10 +1,10 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link nav-sections text-white mr-5 border-white rounded" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link nav-sections text-white px-3 m-1 text-center border-white rounded" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border border-dark text-center" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
@@ -12,10 +12,10 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link nav-sections text-white mr-5 border-white rounded" href="#" id="airplane-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link nav-sections text-white px-3 m-1 text-center border-white rounded" href="#" id="airplane-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Airplanes
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="airplance-link">
+            <div class="dropdown-menu border border-dark text-center" aria-labelledby="airplance-link">
                 <a href="{% url 'products' %}?type=propeller" class="dropdown-item">Propeller</a>
                 <a href="{% url 'products' %}?type=jet" class="dropdown-item">Jet</a>
                 <a href="{% url 'products' %}?type=turbofan" class="dropdown-item">Turbofan</a>
@@ -23,20 +23,20 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link nav-sections text-white mr-5 border-white rounded" href="#" id="helicopter-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link nav-sections text-white px-3 m-1 text-center border-white rounded" href="#" id="helicopter-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Helicopters
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="helicoper-link">
+            <div class="dropdown-menu border border-dark text-center" aria-labelledby="helicoper-link">
                 <a href="{% url 'products' %}?type=turbine" class="dropdown-item">Turbine</a>
                 <a href="{% url 'products' %}?type=piston" class="dropdown-item">Piston</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link nav-sections text-white mr-5 border-white rounded" href="#" id="drone-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link nav-sections text-white px-3 m-1 text-center border-white rounded" href="#" id="drone-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Drones
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="drone-link">
+            <div class="dropdown-menu border border-dark text-center" aria-labelledby="drone-link">
                 <a href="{% url 'products' %}?type=single-rotor" class="dropdown-item">Single-Rotor</a>
                 <a href="{% url 'products' %}?type=multi-rotor" class="dropdown-item">Multi-Rotor</a>
             </div>
