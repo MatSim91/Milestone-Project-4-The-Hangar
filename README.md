@@ -281,11 +281,11 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 2. After adding the search functionality for product types the server was running fine and not showing any error, but everytime I selecting the product type like "Jets" on the navbar it wasn't showing anything.
     - 2.1 **Fix:** I have to add a Friendly name to models.py so while selecting the type on navbar would retrieve the type name all in lowercase and show the friendly name with the first letter capitalized.
 
-3.
-    - 3.1 **Fix:** 
+3. While trying to setup webhook I got a few 401 errors while trying to send a test event to a webhook endpoint. While investigating it better I have found out that this error was related to an Unauthorized request.
+    - 3.1 **Fix:** The 8000 port was set to private and while checking Slack I have found out that the 8000 port must be set to public. After changing the 8000 port to public I was still getting a 401 error and this time was due to the URL added in stripe not containing the 8000 port on the URL (https://8000-coffee-mongoose-wi4a85v2.ws-eu18.gitpod.io/checkout/wh/).
 
-4. 
-    - 4.1 **Fix:** 
+4. After I deleted a product on Django Admin panel to perform a test the entire website started returning a 404 with the error message `RelatedObjectDoesNotExist at /admin/login/`
+    - 4.1 **Fix:** After trying several times to close and start the python server and also shutting off and opening again the workspace on gitpod I found that the issue was with the session cookies. After clearing all the cookies I manage to see the website again without the products that I have deleted.
 
 5. 
     - 5.1: **Fix:** 
