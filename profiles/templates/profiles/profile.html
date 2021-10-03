@@ -20,7 +20,7 @@ lines (23 sloc)  616 Bytes
 <div class="container padding-top">
     <div class="row">
         <div class="col">
-            <h2 class="mb-4">My Profile</h2>
+            <h1 class="mb-4 text-center font-weight-bold">My Profile</h1>
             <hr>
         </div>
     </div>
@@ -30,7 +30,7 @@ lines (23 sloc)  616 Bytes
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-black btn-lg text-uppercase badge text-black rounded-pill border border-dark float-right form-font">Update Information</button>
+                <button class="btn btn-black btn-lg text-uppercase badge text-black rounded-pill border border-dark float-right form-font add-button">Update Information</button>
             </form>
         </div>
         <div class="col-12 col-lg-6">

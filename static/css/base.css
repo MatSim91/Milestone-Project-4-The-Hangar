@@ -46,11 +46,6 @@ hr {
 	border: solid 1px #000000;
 }
 
-.badge:hover {
-	background: #000000 !important;
-    color: #ffffff !important;
-}
-
 a.category-badge > span.badge:hover {
     background: #000000 !important;
     color: #ffffff !important;
@@ -59,6 +54,10 @@ a.category-badge > span.badge:hover {
 .add-button:hover {
 	background: #000000 !important;
     color: #ffffff !important;
+}
+
+.border-info {
+	border-color: #000000 !important;
 }
 
 .to-top-button {

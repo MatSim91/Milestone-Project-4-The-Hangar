@@ -14,8 +14,8 @@
     <div class="container padding-top">
         <div class="row">
             <div class="col-12 col-md-6">
-                <h2 class="mb-4">Product Management</h2>
-                <h5 class="text-muted">Edit a Product</h5>
+                <h2 class="mb-4 text-center font-weight-bold">Product Management</h2>
+                <h5 class="text-muted text-center">Edit a Product</h5>
                 <hr>
             </div>
         </div>
@@ -26,8 +26,8 @@
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn btn-black btn-lg text-uppercase badge text-black rounded-pill border border-dark form-font" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black btn-lg text-uppercase badge text-black rounded-pill border border-dark form-font" type="submit">Update Product</button>
+                        <a class="btn btn-black btn-lg text-uppercase badge text-black rounded-pill border border-dark form-font add-button" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-black btn-lg text-uppercase badge text-black rounded-pill border border-dark form-font add-button" type="submit">Update Product</button>
                     </div>
                 </form>
             </div>            
