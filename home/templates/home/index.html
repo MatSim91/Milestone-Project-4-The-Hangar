@@ -41,7 +41,7 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="container">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -55,23 +55,10 @@
         <div class="col col-12 col-md-12 my-auto center-welcome-message">
             <div class="display-4 text-white test">
             <h1 class="page-title">The Hangar</h1>
-
-            <audio id="my_audio" src="assets/audio/airplane.mp3" loop="loop"></audio>
-            
-            <p>
-                <audio id="airplane-sound" src="media/audio/airplane.mp3" preload="auto"></audio>
-                <a class="btn btn-light font-weight-bold" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="playMusic" onclick="playMusic()">
-                  Click Here to Request Access
-                </a>
-              </p>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    <a class="btn btn btn-success btn-lg rounded-pill font-weight-bold" href="{% url 'products' %}" role="button">Access Granted <i class="fas fa-angle-double-right"></i></a>
-                    <p class="redirect-message mt-3">You will be redirected in 15 seconds...</p>
-                </div>
-              </div>
-
             <br>
+            <h4>
+                <a class="btn btn-outline-light btn-lg rounded-pill" href="{% url 'products' %}" role="button">Click here to Access</a>
+            </h4>
         </div>
     </div>
 </div>
@@ -79,19 +66,6 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script type="text/javascript">
-    var gameMusic = document.getElementById("airplane-sound")
-
-    document.getElementById("airplane-sound").loop = true;
-
-    function playMusic() {
-        gameMusic.play();
-    }
-
-    setTimeout(function(){
-            window.location.href = "{% url 'products' %}";
-         }, 22000);
-</script>
 {% endblock %}
 
 </body>

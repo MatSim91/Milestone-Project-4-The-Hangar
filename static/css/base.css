@@ -130,7 +130,7 @@ a.category-badge > span.badge:hover {
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	height: calc(100vh - 33px);
+	height: calc(100vh);
 }
 
 .hero-overlay {
