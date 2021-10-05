@@ -194,7 +194,7 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 ## Database
 
-- Using Django SQL databases on the development envirotnmnt and in Heroku I have used a PostgreSQL database for deployment.
+- Throughout the development of the project I was using  Using Django SQL database SQLite and in Heroku I have used a PostgreSQL database for deployment.
 
 ### Product App
 
@@ -448,6 +448,12 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 4. After I deleted a product on Django Admin panel to perform a test the entire website started returning a 404 with the error message `RelatedObjectDoesNotExist at /admin/login/`
     - 4.1 **Fix:** After trying several times to close and start the python server and also shutting off and opening again the workspace on gitpod I found that the issue was with the session cookies. After clearing all the cookies I manage to see the website again without the products that I have deleted.
+
+5. After deploying to Heroku I was trying to access the Postgres database to create Superuser but it was only accessing the SQLite database.
+    - 4.1 **Fix:** After checking with Tutor Support he informed I forgot to add the DATABASE_URL to gitpod vars.
+
+6. After deploying to Amazon S3 bucket the images were not showing.
+    - 4.1 **Fix:** After a very detailed check I have found that instead of using `/media/` the images in Amazon S3 bucket were set to /static/media/. After I updated the URL the images appeared again.
 
 # Deployment
 
