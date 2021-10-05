@@ -11,20 +11,19 @@ The Hangar is a project for an Aircraft Model Store e-commerce website. This e-c
 1. [User Experience (UX)](#user-experience)
     - [User stories](#user-stories)
     - [Design](#design)
-    - [Wireframes](#wireframes)
-    - [MongoDB Database](#mongodb-database)
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
 4.  [Languages Used](#languages-used)
 5.  [Frameworks, Libraries & Programs Used](#frameworks-libraries-and-programs-used)
-6.  [Testing](#testing)
+6.  [Database](#database)
+7.  [Testing](#testing)
     - [Testing User Stories](#testing-user-stories)
     - [Additional Testing](#additional-testing)
     - [Bugs and Fixes](#bugs-and-fixes)
-7. [Deployment](#deployment)
+8. [Deployment](#deployment)
     - [GitHub](#github-pages)
     - [Heroku](#heroku)
-8. [Credits](#credits)
+9. [Credits](#credits)
     - [Code](#code)
     - [Content](#content)
     - [Media](#media)
@@ -77,15 +76,6 @@ The main intention of this e-commerce store is to be easy for non-computer savy 
         - The font that I choose for the project was the Oxygen font imported from Google Fonts. This font was chosen due to the easy readability and I thought that the font matched in a nice way in what the website had to offer. The 
 
         - The font was imported from [Google Fonts](https://fonts.google.com/)
-
-
-*   ## Wireframes
-
-    - The wireframe was developed using [balsamiq](https://balsamiq.com/).
-
-    - Wireframe - [View](https://github.com/MatSim91/)
-
-    - Wireframe - [View](https://github.com/MatSim91/)
 
 # Features
 
@@ -186,7 +176,27 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 # Testing
 
+- The website was tested in Google Chrome, Microsoft Edge, Mozilla Firefox, both on Windows and Mac OS.
 
+- Through the Console device toolbar it was also tested using the following emulated devices: Moto G4, Galaxy S5, Pixel 2, iPhone 5/SE iPhone 6/7/8, iPhone X, iPad, iPad Pro, Surface Duo.
+
+- Used [Am I Responsive](http://ami.responsivedesign.is/#) for testing different viewports and a [Mockup Generator](http://techsini.com/multi-mockup/index.php) 
+
+- The W3C Markup Validator and W3C CSS Validator Services:
+
+    - [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) - Validated all pages HTML by direct input.
+
+    - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - No errors were found.
+
+    - [Web Formatter](https://webformatter.com/) - Was also used for checking for any errors in HTML and CSS.
+
+    - [JavaScript Validator](https://jshint.com) - No errors were found.
+
+    - [PEP8 online check](http://pep8online.com/) - Succesfully passed through the PEP8 validator.
+
+    - [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools)
+
+## Database
 
 ## Testing User Stories
 
@@ -215,34 +225,61 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
     All testing performed via 
 
--   ### Testing:
+-   ### Testing index.html page:
 
-    1. When clicking on the
+    1. When clicking "Click here to Access" I am succesfully redirected to the webstore page.
 
-    2. Tested the 
+    2. Tested that the hero image of the hangar is responsive to the screen size.
 
-    3. Tested the 
+-   ### Testing the products App:
 
-    4. Tested all the 
-
--   ### Testing :
-    1. 
+    #### products.html page:
+    1. On the /products/ page tested the Sort by option with: Price Ascending, Price Descending, Category Ascending, Category Descending, Name (A-Z), Name (Z-A) and made sure the sorting is working correctly for each sorte option.
     
-    2.  
-        1.  When 
+    2.  Tested the "Back to top" Button to make sure it is working.
     
-    3. Tested the 
-        1.  
-        2.  
+    3. Tested the "Edit" and "Delete" buttons under the products to make sure they are working correctly.
 
--   ### Testing :
+    4. Tested the redirect to the product details page when we click on the product image.
+
+    5. When clicking on the products tags we then filter the products to show all the same tags.
+
+    6. Made sure that the success toast alert appears when a product is added to the cart.
+
+    #### product_detail.html page:
+
+    1. Tested the "Edit" and "Delete" buttons to make sure they are working correctly.
+
+    2. Tested the Increase and Decrease buttons to make sure they were working properly and that the quantity was updating accordingly.
+
+    3. Tested both buttons "Keep Shopping" (Redirects back to /products/ page) and "Add to Cart"(add product to cart) to make sure they are working properly.
+
+    #### add_product.html page:
+
+    1. Made sure that while on the adding product management page users can choose the correct selectors for Caregoty, Type and Manufacturer from the database.
+
+    2. Tested both buttons "Cancel" (returns to products page) and "Add product" (to add the product to the database)
+
+    3. Tested adding a test product and made sure the image and all the fiels were created correctly on the database.
+
+    4. Tested the "noimage.jpg" to make sure if a product is added without an image the noimage.jpg appears.
+
+    #### edit_product.html page:
+
+    1. Tested that while clicking on the "Edit" button the user is redirected to the /product/edit/# page and the product information populates the forms.
+
+    2. Tested both buttons "Cancel" (returns to products page) and "Update product" to certify they are working properly and updating the product information.
+
+    3. Tested the toasts alert to make sure they appear to indicate that you are editing a product and also a toast success appears when you have succesfully updated the product.
+
+-   ### Testing the cart apps and also cart.html page :
     1. Tested the 
 
     2. Tested the 
 
     3. Tested the 
 
--   ### Testing :
+-   ### Testing checkout app and also checkout.html and checkout_success.html page:
     1. Made sure when the 
 
     2. Tested that all the 
@@ -251,12 +288,12 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
     4. Tested the 
 
--   ### Testing :
+-   ### Testing profiles app and profile.html page:
     1. Added 
 
     2. Tested the required 
 
--   ### Testing :
+-   ### Testing toasts and main-nav.html and mobile-header.html pages:
     1. Tested the 
 
     2. Made sure the 
