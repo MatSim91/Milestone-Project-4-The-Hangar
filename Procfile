@@ -1,1 +1,1 @@
-web: gunicorn the_hangar.wsgi:applicationheroku login
+web: gunicorn the_hangar.wsgi:application
