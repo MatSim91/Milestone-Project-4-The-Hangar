@@ -133,40 +133,34 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 5. [GitHub](https://github.com/)
     - GitHub was used to store the projects code after being pushed from Git.
 
-6. [Balsamiq](https://balsamiq.com/)
-    - Balsamiq was used to create the [Wireframes](#wireframes) during the design process.
-
-7. [Google Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+6. [Google Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
     - Used for testing and fixing website bugs. Also used Google Lighthouse for performance testing.
 
-8. [Google Icons](https://google.github.io/material-design-icons/#icon-font-for-the-web)
+7. [Google Icons](https://google.github.io/material-design-icons/#icon-font-for-the-web)
     - Google Icons was used on the site to improve visual design.
 
-9. [JQuery](https://jquery.com/)
+8. [JQuery](https://jquery.com/)
     - DOM manipulation to initiate the interactive functions from Materialize.
 
-10. [Werkzeug](https://www.palletsprojects.com/p/werkzeug/)
-    - Comprehensive Web Server Gateway Interface web application library.
-
-11. [Heroku](https://www.heroku.com/)
+9. [Heroku](https://www.heroku.com/)
     - Enabling this project to be build, run, and operate entirely in the cloud.
 
-12. [Stripe](https://stripe.com/en-ie)
+10. [Stripe](https://stripe.com/en-ie)
     -  NoSQL database used for the project.
 
-13. [Postgre](https://www.postgresql.org/)
+11. [Postgre](https://www.postgresql.org/)
     - PostgreSQL was the database used to store all the models in Heroku on the production environment.
 
-14. [Gitpod](https://www.gitpod.io/)
+12. [Gitpod](https://www.gitpod.io/)
     - Was the online IDE used to developed the entire project and to push changes and production to GitHub and Heroku.
 
-15. [Markdown](https://pt.wikipedia.org/wiki/Markdown)
+13. [Markdown](https://pt.wikipedia.org/wiki/Markdown)
     - Was used for this README and to create the table of contents and code blocks.
 
-16. [Fontawesome](https://fontawesome.com/)
+14. [Fontawesome](https://fontawesome.com/)
     - Was used on the entire website to provide a better UX/UI through the site.
 
-17. [SQLite](https://www.sqlite.org/)
+15. [SQLite](https://www.sqlite.org/)
     - The Django SQlite database was used as the database in the development environment
 
 # Testing
