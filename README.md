@@ -1,8 +1,6 @@
 <h1 align="center">Milestone Project 4 - The Hangar</h1>
 
-![Hangar Mockup](static/images/project/)
-
-[Click here to view the live project :link:](https://)
+[Click here to view the live project :link:](https://the-hangar.herokuapp.com/)
 
 The Hangar is a project for an Aircraft Model Store e-commerce website. This e-commerce website was built to all the Aviation lovers, pilots and mechanics that wish to push their dreams to a next level and buy a real flying Aircraft Miniature Model. As a quote widely attributed to da Vinci say "Once you have tasted flight, you will forever walk the earth with your eyes turned skyward, for there you have been, and there you will always long to return."
 
@@ -32,9 +30,6 @@ The Hangar is a project for an Aircraft Model Store e-commerce website. This e-c
 # User Experience
 
 The main intention of this e-commerce store is to be easy for non-computer savy users and users with no web experience to navigate. The website returns a simplistic but realistic design and experience, focusing on what is important: The Aircraft Models.
-
-
-
 
 -   ## User stories
 
@@ -129,7 +124,7 @@ A brief overview of the languages, frameworks, and other tools I've used on this
     - Used to check and validate all JavaScript code to check for any typos or errors.
 
 3. [Google Fonts](https://fonts.google.com/)
-    - Google fonts was used to import the 
+    - Google fonts was used to import the Oxygen font.
 
 4. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
@@ -169,6 +164,9 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 16. [Fontawesome](https://fontawesome.com/)
     - Was used on the entire website to provide a better UX/UI through the site.
+
+17. [SQLite](https://www.sqlite.org/)
+    - The Django SQlite database was used as the database in the development environment
 
 # Testing
 
@@ -310,7 +308,7 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 ## Additional Testing
 
-    All testing performed 
+    All testing performed via the app deployed to Heroku (on the-hangar.herokuapp.com)
 
 -   ### Testing index.html page:
 
@@ -457,6 +455,76 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 # Deployment
 
+### Deployment to Heroku
+
+The project was deployed on [Heroku](the-hangar.herokuapp.com), the following steps were taken:
+
+1. Created a requirements.txt file by typing: `pip3 freeze --local > requirements.txt` in the terminal.
+2. Created a procfile.
+3. Logged in to Heroku.
+4. Pressed the button "new" and then "create new app".
+5. Chose an app name and a region and pressed create app.
+6. Went to deployment section.
+7. Under deployment method pressed Github.
+8. Chose the right repository in the list, pressed search and then connect.
+9. Pressed enable automatic deploys under automatic deploys.
+10. Click on the find more addons button.
+11. Click on the Heroku Postgres button.
+12. Click on install Heroku Postgres.
+13. Went to settings.
+14. Added all the config vars needed for the project.
+15. Pressed open app.
+
+### Setting up Stripe, PostgreSQL database and general environment variables
+
+The first step after forking or cloning the project would be to install all dependencies needed by the system.
+If the project is opened in GitPod the command in the terminal would be: `pip3 install -r requirements.txt`.
+If working locally setting up a virtual environment first and after that running the `pip3 install -r requirements.txt` command.
+
+In order for the project to work in a product environment a PostgreSQL database would need to be set up, this process might differ depending upon how you choose to deploy the site but on Heroku you would:
+1. Log in to Heroku.
+2. From the dashboard click the link to the app.
+3. Go to resources.
+4. Click on the find more addons button.
+5. Click on the Heroku Postgres button.
+6. Click on install Heroku Postgres.
+7. Choose the Hobby dev free plan and choose your app in the list.
+8. Press submit form.
+
+If your using another way of hosting the project include an environment variable called "DATABASE_URL" which only exists in the production environment and create the connection to the database in this section in the settings.py file: if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.parse(DATABASE_URL)
+    }
+
+
+In order for the payment and order system to work a Stripe account needs to be created, with these steps:
+
+1. Go to https://dashboard.stripe.com/register.
+2. Enter all details and press create account.
+3. Confirm your email address by following the link.
+4. Create an account by pressing the top left account button.
+5. Write name and press create account.
+6. Navigate to developers/webhooks.
+7. Click on add endpoint.
+8. Enter the base URL of your website plus "/payments/confirmation/" in the URL field.
+9. Choose checkout.session.completed in events to send and press add endpoint.
+10. Go to developers/webhooks and click on the webhook.
+11. Get the webhook signing secret by clicking click to reveal.
+12. Get your Stripe API keys from developers/Stripe API
+13 Store your webhook signing secret in the variable STRIPE_ENDPOINT_SECRET in settings.py.
+14. Store your Stripe API secret_key in the variable STRIPE_TEST_SECRET_KEY in settings.py.
+15. Add your publishable key as a string argument to the const stripe = Stripe() object in payments.js
+
+Preferably hide your STRIPE_ENDPOINT_SECRET and STRIPE_TEST_SECRET_KEY values in environment variables if the project is to be publicly displayed.
+The same goes for the rest of the settings that needs to be added to setting.py: 
+
+SECRET_KEY : a secret key used to hash passwords etc.
+EMAIL_HOST_USER : Gmail account you want to send mails from..
+EMAIL_HOST_PASSWORD = App password which can be acquired by setting up two step verification and creating an app password for your Google account
+DEFAULT_FROM_EMAIL = same Gmail account.
+
+In development add an environment variable called DEVELOPMENT to use the development database.
+
 ## GitHub Pages 
 
 **Under the repository page:**
@@ -480,42 +548,9 @@ A brief overview of the languages, frameworks, and other tools I've used on this
         - `python3 -m http.server` - To run a preview of the website on the browser.
         - `git status` - To display the current state of the working directory and the staging area.
 
-## Heroku
-
-- To deploy the app using Heroku, go through the following steps:
-
-    1. Use pip3 freeze > `requirements.txt` to create a list of the dependencies.
-
-    2. Create a `Procfile` by running this command on the CLI: `echo web: python app.py > Procfile`
-
-    3. Run `git add .`, `git commit -m`, and `git push`, to push the project files to your GitHub repository.
-
-    4. Navigate to Heroku, log in and create a new app by clicking on the 'New' and 'Create New App'. Enter your app name and select your region and create app.
-
-    5. Under the 'Deploy' tab, select 'GitHub - Connect to GitHub'.
-    
-    6. Enter your repository's name in the input field, and connect once found.
-
-    7. To set your environment variables navigate to the 'Settings' tab and scroll down to 'reveal config vars'
-
-    8. Add the config vars:
-
-    | Key | Value |
-    |:---:|:-----:|
-    | IP | 0.0.0.0 |
-    | PORT | 5000 |
-    | MONGO_DBNAME | `<database_name>` |
-    | MONGO_URI | `` |
-    | SECRET_KEY | `<Your secret Key>` |
-
-    9. Navigate to the 'Deploy' tab. To enable automatic deployment, scroll down to the 'Automatic Deploys' section.
-
-    10. Choose your GitHub branch and enable automatic deployment.
-
-
 ## Running locally
 
-1. Go tho this [project repository](https://github.com/MatSim91/Milestone-Project-3-The-Compendium-of-scientists) in GitHub while signed in in your own GitHub account.
+1. Go tho this [project repository](https://github.com/MatSim91/Milestone-Project-4-The-Hangar) in GitHub while signed in in your own GitHub account.
 2. Click on the dropdown menu Code option.
 3. Click on "Open with GitHub Desktop" to clone and open the repository locally.
 4. Click on the "Choose" option and navigate to the local path where you want the cloned repository to be.
@@ -535,11 +570,7 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 - [Bootstrap](https://getbootstrap.com) for the large and free libraries 
 
-- [M](https://) - 
-
-- [G](https://) - 
-
-- [G](https://) - 
+- [Pixabay](https://pixabay.com/images/search/hangar/) - Thanks to Pixabay for providing the awesome hero image of The Hangar
 
 ## Content
 
@@ -553,6 +584,6 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 - My mentor Akshat for all his help and ideas.
 
-- Thanks to the tutors at Code Institute for all help during the course.
+- Thanks to the tutors at Code Institute for all help during the course (Especial thanks to Scott for all his help).
 
 - Slack channel help regarding ongoingissues and problem solving ideas.
