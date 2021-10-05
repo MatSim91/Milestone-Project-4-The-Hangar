@@ -19,8 +19,9 @@ The Hangar is a project for an Aircraft Model Store e-commerce website. This e-c
     - [Additional Testing](#additional-testing)
     - [Bugs and Fixes](#bugs-and-fixes)
 8. [Deployment](#deployment)
-    - [GitHub](#github-pages)
     - [Heroku](#heroku)
+    - [Stripe and Database](#stripe-and-database)
+    - [GitHub](#github-pages)
 9. [Credits](#credits)
     - [Code](#code)
     - [Content](#content)
@@ -188,7 +189,7 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
     - [PEP8 online check](http://pep8online.com/) - Succesfully passed through the PEP8 validator.
 
-    - [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools)
+    - [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools) - Used to check general performance of the website.
 
 ## Database
 
@@ -455,7 +456,7 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 # Deployment
 
-### Deployment to Heroku
+## Heroku
 
 The project was deployed on [Heroku](the-hangar.herokuapp.com), the following steps were taken:
 
@@ -475,7 +476,7 @@ The project was deployed on [Heroku](the-hangar.herokuapp.com), the following st
 14. Added all the config vars needed for the project.
 15. Pressed open app.
 
-### Setting up Stripe, PostgreSQL database and general environment variables
+## Stripe and Database
 
 The first step after forking or cloning the project would be to install all dependencies needed by the system.
 If the project is opened in GitPod the command in the terminal would be: `pip3 install -r requirements.txt`.
@@ -495,7 +496,6 @@ If your using another way of hosting the project include an environment variable
     DATABASES = {
         'default': dj_database_url.parse(DATABASE_URL)
     }
-
 
 In order for the payment and order system to work a Stripe account needs to be created, with these steps:
 
