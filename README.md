@@ -4,7 +4,7 @@
 
 [Click here to view the live project :link:](https://)
 
-The Hangar is a project for an Aircraft Model Store e-commerce website.
+The Hangar is a project for an Aircraft Model Store e-commerce website. This e-commerce website was built to all the Aviation lovers, pilots and mechanics that wish to push their dreams to a next level and buy a real flying Aircraft Miniature Model. As a quote widely attributed to da Vinci say "Once you have tasted flight, you will forever walk the earth with your eyes turned skyward, for there you have been, and there you will always long to return."
 
 # Table Of Contents
 
@@ -32,42 +32,49 @@ The Hangar is a project for an Aircraft Model Store e-commerce website.
 
 # User Experience
 
+The main intention of this e-commerce store is to be easy for non-computer savy users and users with no web experience to navigate. The website returns a simplistic but realistic design and experience, focusing on what is important: The Aircraft Models.
+
+
 
 
 -   ## User stories
 
     -   ### First Time Visitor Goals
-        1. As a First Time user, I want to 
-        2. As a First Time user, I want to 
-        3. As a First Time user, I want to 
+        1. As a First Time user,  I want to access the website and know what it offers.
+        2. As a First Time user, I want to to easily navigate through the website and register my account.
+        3. As a First Time user, I want to check all the products section to see all the products the website has to offer.
+        4. As a First Time user, I want to filter the products per categories or per types to check the exact types of Aircraft models I am interested in.
+        5. As a First Time user, I want to quickly and easily access my current cart to check all the products I have added, their quantity and their price.
+        6. As a First Time user, I want to quickly and easily update my current cart by changing the products quantity or deleting a product I don't want anymore.
 
 
     -   ### Returning Visitor Goals
-        1. As a Returning user, I want to 
-        2. As a Returning user, I want to 
-        3. As a Returning user, I want to 
-        4. As a Returning user, I want to 
+        1. As a Returning user, I want to check and sort the aircraft models by their price and see which products are within my budget.
+        2. As a Returning user, I want to already use my registered account to login back to the website.
+        3. As a Returning user, I want to easily and quickly use the safe checkout method with my previous saved information.
+        4. As a Returning user, I want to check my favorite aircraft model types.
     
     - ### Frequent Visitor Goals
-        1. As a Frequent user, I want to 
-        2. As a Frequent user, I want to 
-        3. As a Frequent user, I want to 
-        4. As a Frequent user, I want to 
+        1. As a Frequent user, I want to login back to my account with all the previous information from the last purchases added.
+        2. As a Frequent user, I want to quickly view all products in the page and see if there is any new product added.
+        3. As a Frequent user, I want to see how much I need to add on my cart in order to not pay shipping.
+        4. As a Frequent user, I want to quickly add products to the cart and return to the webstore to add more products to the cart.
+        5. As a Frequent user, I want to be able to leave the website but still have my purchase information and cart information saved, so I can return to the cart and still have my products added there.
 
 -   ## Design
     -   ### Colour Scheme
 
-        - 
+        - I choose and used neutral colors to not deviate the attention from the products. With the white body and the black navigation bar the products page creates a color contrast as the Aircraft Models in different colors grab the attention of the customer.
 
         - [Coolors](https://coolors.co/) was used to choose the color palette.
 
-        - The main colors used were: 
+        - The main colors used were: Black [#000000], White [#FFFFFF],
 
         ![Color Palette](static/images/project/)
 
     -   ### Typography
 
-        - 
+        - The font that I choose for the project was the Oxygen font imported from Google Fonts. This font was chosen due to the easy readability and I thought that the font matched in a nice way in what the website had to offer. The 
 
         - The font was imported from [Google Fonts](https://fonts.google.com/)
 
@@ -82,9 +89,9 @@ The Hangar is a project for an Aircraft Model Store e-commerce website.
 
 # Features
 
-- **A** - Users can
+- **Main top nav bar** - Where users can surf the website and view all category, types, and all the products of the website using the same navigation option.
 
-- **A** - Users can 
+- **Sort field** - Users can sort all the products by price, name and category by selecting their sort options in the field.
 
 - **A** - Users can 
 
@@ -92,7 +99,7 @@ The Hangar is a project for an Aircraft Model Store e-commerce website.
 
 - **A** - Allow Users to 
 
-- **A** - 
+- **Session cookie user** - Saves a session cookie so Users don't need to keep login in every time they re-open the website and also keeps their cart information and cart products saved on the cookie in case they need to stop in the middle of the product hunt to do something else.
 
 - **A** - 
 
@@ -108,14 +115,17 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
     - Cascading Style Sheets as the design of the site.
 
-- [Materialize:](https://materializecss.com/)
-    - Loaded Materialize to provide all its pre-built classes, grid and classes functions.
+- [Bootstrap:](https://getbootstrap.com/)
+    - Loaded Bootstrap to provide all its pre-built classes, grid and classes functions.
 
 - [JavaScript](https://www.javascript.com)
    - Used to add interactivity to the site.
 
 - [Python](https://pt.wikipedia.org/wiki/Python)
     - Used to build the backend and render the pages.
+
+- [Django](https://www.djangoproject.com/)
+    - Django was the backend framework used to handle all backend processes such as interactions with the database, authentication and rendering of HTML templates.
 
 # Languages Used
 
@@ -126,8 +136,8 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 # Frameworks Libraries and Programs Used
 
-1. [Materialize](https://materializecss.com/)
-    - Materialize was used to assist with the responsiveness and styling of the website.
+1. [Bootstrap:](https://getbootstrap.com/)
+    - Loaded Bootstrap to provide all its pre-built classes, grid and classes functions.
 
 2. [JavaScript Validator](https://jshint.com)
     - Used to check and validate all JavaScript code to check for any typos or errors.
@@ -153,20 +163,27 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 9. [JQuery](https://jquery.com/)
     - DOM manipulation to initiate the interactive functions from Materialize.
 
-10. [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-    - Micro-framework.
-
-11. [Jinja](https://www.palletsprojects.com/p/jinja/)
-     -  Template engine for Python.
-
-12. [Werkzeug](https://www.palletsprojects.com/p/werkzeug/)
+10. [Werkzeug](https://www.palletsprojects.com/p/werkzeug/)
     - Comprehensive Web Server Gateway Interface web application library.
 
-13. [Heroku](https://www.heroku.com/)
+11. [Heroku](https://www.heroku.com/)
     - Enabling this project to be build, run, and operate entirely in the cloud.
 
-14. [MongoDB](https://www.mongodb.com/)
+12. [Stripe](https://stripe.com/en-ie)
     -  NoSQL database used for the project.
+
+13. [Postgre](https://www.postgresql.org/)
+    - PostgreSQL was the database used to store all the models in Heroku on the production environment.
+
+14. [Gitpod](https://www.gitpod.io/)
+    - Was the online IDE used to developed the entire project and to push changes and production to GitHub and Heroku.
+
+15. [Markdown](https://pt.wikipedia.org/wiki/Markdown)
+    - Was used for this README and to create the table of contents and code blocks.
+
+16. [Fontawesome](https://fontawesome.com/)
+    - Was used on the entire website to provide a better UX/UI through the site.
+
 # Testing
 
 
@@ -174,21 +191,25 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 ## Testing User Stories
 
 -   ### First Time Visitor Goals
-    1. As a first time user entering the site 
-    2. As a first time user I can navigate via the 
-    3. As a first time user I can see the 
+    1. As a first time user, entering the site I know by the landing page and by vieweing the "All Products" section that the website sells Aircraft Models.
+    2. As a first time user, I can navigate via the top navigation menu to view and filter the products and to also register my account.
+    3. As a first time user, I can see the all the products in the website by going to the "All products" section via the top nav bar.
+    4. As a first time user, I can filter all the products by their categories or Aircraft types via the top navigation bar to check the products I am most interested in.
+    5. As a first time user, I can check my current cart by clicking on the Cart icon on the top menu and check the products I have added with the quantity and price.
+    6. As a first time user, I can quickly and easily update my cart information by decreasing/increasing the products quantity and then clicking update or by removing a product I don't want it anymore.
 
 -   ### Returning Visitor Goals
-    1. As a returning user I can 
-    2. As a returning user I can 
-    3. As a returning user I can 
-    4. As a returning user I can 
+    1. As a returning user, I can check and sort the Aircraft Models by their price by using the Sort Field and selecting the Price sorting options.
+    2. As a returning user, I can login back with my registered account from previous sessions.
+    3. As a returning user, I can go through the checkout process with my previous information saved there.
+    4. As a returning user, I can check my favorite Aircraft Models types by filtering the types I like the most via the top navigation menu.
 
 -   ### Frequent Visitor Goals
-    1. As a return user I can 
-    2. As a return user I can 
-    3. As a return user I can 
-    4. As a return user I can 
+    1. As a frequent user, I can login back to my account with all my previous information from past purchases added there and also with the order history.
+    2. As a frequent user, I can quickly view all the products by going to "All Products" on the top navigation menu and seeing all the Aircraft Models current in the store.
+    3. As a frequent user, I can see a banner message informing if I will have to pay the shipping price with the current cart and products I have added in the cart.
+    4. As a frequent user, I can quickly add the products to my cart and return to the store using the "Back to the store" button to view and add any more products to the cart.
+    5. As a frequent user, I can leave the website and when I return my session is saved and I can return to vieweing the website and the products without having to login back again and without having to re-add my products to the cart.
 
 ## Additional Testing
 
