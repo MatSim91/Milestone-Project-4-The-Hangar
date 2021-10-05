@@ -120,7 +120,7 @@ a.category-badge > span.badge:hover {
 
 .hero-image {
 	height: 100vh;
-	background: url('/media/the_hangar.jpg') no-repeat bottom right fixed;
+	background: url('/static/media/the_hangar.jpg') no-repeat bottom right fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

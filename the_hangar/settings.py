@@ -129,10 +129,12 @@ WSGI_APPLICATION = 'the_hangar.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 if 'DATABASE_URL' in os.environ:
+    print("Using Postgres")
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
+    print("Using SQLite")
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
