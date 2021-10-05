@@ -310,7 +310,7 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 ## Additional Testing
 
-    All testing performed via 
+    All testing performed 
 
 -   ### Testing index.html page:
 
@@ -513,7 +513,7 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 2. Click on the dropdown menu Code option.
 3. Click on "Open with GitHub Desktop" to clone and open the repository locally.
 4. Click on the "Choose" option and navigate to the local path where you want the cloned repository to be.
-5. Click "Clone"
+5. Click "Clone".
 
 - [Click here](https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories) for more cloning GitHub options.
 
@@ -541,7 +541,7 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 ## Media
 
--  The media for the  was taken from a website that sell Aircraft Models: [Revell](https://www.revell.de/).
+-  The media for the Aircraft Products was taken from a website that sell Aircraft Models: [Revell](https://www.revell.de/).
 
 ## Acknowledgements
 
