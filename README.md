@@ -231,12 +231,12 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
     2. Tested that the hero image of the hangar is responsive to the screen size.
 
--   ### Testing the products App:
+-   ### Testing the Products App:
 
     #### products.html page:
     1. On the /products/ page tested the Sort by option with: Price Ascending, Price Descending, Category Ascending, Category Descending, Name (A-Z), Name (Z-A) and made sure the sorting is working correctly for each sorte option.
     
-    2.  Tested the "Back to top" Button to make sure it is working.
+    2. Tested the "Back to top" Button to make sure it is working.
     
     3. Tested the "Edit" and "Delete" buttons under the products to make sure they are working correctly.
 
@@ -246,6 +246,10 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
     6. Made sure that the success toast alert appears when a product is added to the cart.
 
+    7. Made sure that all information being picked up from the database is showing correctly on the page.
+
+    8. Made sure that only admins can view the edit and delete button and no unintended user can modify the product by modifying the page URL.
+
     #### product_detail.html page:
 
     1. Tested the "Edit" and "Delete" buttons to make sure they are working correctly.
@@ -253,6 +257,8 @@ A brief overview of the languages, frameworks, and other tools I've used on this
     2. Tested the Increase and Decrease buttons to make sure they were working properly and that the quantity was updating accordingly.
 
     3. Tested both buttons "Keep Shopping" (Redirects back to /products/ page) and "Add to Cart"(add product to cart) to make sure they are working properly.
+
+    4. Made sure that only admins can view the edit and delete button and no unintended user can modify the product by modifying the page URL.
 
     #### add_product.html page:
 
@@ -272,44 +278,71 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
     3. Tested the toasts alert to make sure they appear to indicate that you are editing a product and also a toast success appears when you have succesfully updated the product.
 
--   ### Testing the cart apps and also cart.html page :
-    1. Tested the 
+-   ### Testing the Cart App and also cart.html page :
 
-    2. Tested the 
+    1. Tested the Increase/Decrease button and then the "Update" button to make sure the product quantity is changing accordingly as well as the total price.
 
-    3. Tested the 
+    2. While Increasing/Decreasing the product quantity and clicking "Update" the Success toast should appear to inform the product quantity was updated accordinly.
+
+    3. Tested the "Remove" button and to confirm the product is removed from the cart.
+
+    4. Tested both the "Keep Shopping" and "Proceed to Checkout" buttons to make sure they are working.
+
+    5. While adding a product under €100 made sure that the yellow banner informing about the free delivery is appearing.
+
+    6. Made sure that all the information is showing correctly like product name, price, quantity, subtotal and grand total.
+
+    6. Made sure that the session cookie is working and that it keeps saved the products inside the cart even if you close and re-open the page.
 
 -   ### Testing checkout app and also checkout.html and checkout_success.html page:
-    1. Made sure when the 
 
-    2. Tested that all the 
+    1. Made sure when clicking on the "Modify Cart" you get back to your cart.
 
-    3. Tested the 
+    2. Tested that when you are logged in the form is populated with the User information correctly.
 
-    4. Tested the 
+    3. Made sure the order summary displays correctly all the information (product name, quantity and price)
+
+    4. Tested purchasing a product and made sure the order was created succesfully in Stripe.
+
+    5. While clicking on "Complete order" made sure the order was completed and redirected to the checkout_success.html page
+
+    6. On the checkout_success.html page made sure all the order information was displaying correctly and that the success toast pops to confirm the order was processed.
+
+    7. On the checkout_success.html page tested the "Back to store" button to make sure it redirects back to the /products/ page.
+
+    8. Made sure after the order is succesfull that the order now displays in the Order History under the My Profile page.
+
+    9. Tested the webhooks for payment intent succeed and payment intent failed.
+
+    10. Made sure that when the "Save this delivery information to my profile" information is selected the information is indeed saved to the user profile.
 
 -   ### Testing profiles app and profile.html page:
-    1. Added 
+    1. Tested the "Update Information" button to make sure the information is updated correctly on the database.
 
-    2. Tested the required 
+    2. made sure the Order History is showing all the past order accordingly.
+
+    3. When clicking on the Order History ID made sure the past order details appears and a toast alert pops in to inform the user is viewing a past confirmation order.
 
 -   ### Testing toasts and main-nav.html and mobile-header.html pages:
-    1. Tested the 
+    1. Tested all the toasts information (error, info, success and warning) throug the website to make sure they are appearing accordingly.
 
-    2. Made sure the 
+    2. On the toast_success.html made sure the button "View your Cart" shows correctly and redirects to the cart page.
 
-    3. Tested the 
+    3. While selecting a product under €100 made sure the yellow bar advising about the free shipping fee appears.
 
--   ### Testing :
-    1. Tested trying to 
+-   ### Testing main navigation and collapsible bar:
 
-    2. Tested the 
+    1. On the main top navigation bar tested all the links to make sure they are working properly and also the filters.
 
-    3. Tested the 
+    2. On the main top navigation bar tested the Cart and Account icongs to make sure they are working. And while checking the account it is displaying the account options correctly.
 
-    4. Tested required 
+    3. Made sure that only admins the product Management option.
 
-    5. Tested the 
+    4. Tested the search bar to make sure it is working properly and the page is updating with the correct search query.
+
+    5. On the collapsible bar made sure that all links are working properly.
+
+    6. On the the collapsible bar made sure that the Search, Cart, and My Account are working as expected and that the total cart price is also updated.
 
 -   ### Testing :
     1. Tested the 
