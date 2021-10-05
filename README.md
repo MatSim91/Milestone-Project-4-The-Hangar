@@ -65,15 +65,11 @@ The main intention of this e-commerce store is to be easy for non-computer savy 
 
         - I choose and used neutral colors to not deviate the attention from the products. With the white body and the black navigation bar the products page creates a color contrast as the Aircraft Models in different colors grab the attention of the customer.
 
-        - [Coolors](https://coolors.co/) was used to choose the color palette.
-
-        - The main colors used were: Black [#000000], White [#FFFFFF],
-
-        ![Color Palette](static/images/project/)
+        - The main colors used were: Black [#000000] and White [#FFFFFF]
 
     -   ### Typography
 
-        - The font that I choose for the project was the Oxygen font imported from Google Fonts. This font was chosen due to the easy readability and I thought that the font matched in a nice way in what the website had to offer. The 
+        - The font that I choose for the project was the Oxygen font imported from Google Fonts. This font was chosen due to the easy readability and I thought that the font matched in a nice way in what the website had to offer.
 
         - The font was imported from [Google Fonts](https://fonts.google.com/)
 
@@ -83,17 +79,17 @@ The main intention of this e-commerce store is to be easy for non-computer savy 
 
 - **Sort field** - Users can sort all the products by price, name and category by selecting their sort options in the field.
 
-- **A** - Users can 
+- **Collapsible nav bar** - To help users navigate the website in smaller screens.
 
-- **A** - Users can 
+- **Quantity update option** - Before and after Users add the product to the cart they can select the product quantity they would like to buy.
 
-- **A** - Allow Users to 
+- **Toasts messages** - Toasts messages to help maintain the user informed of the actions he has taken or actions that he still is taking while using the website.
 
 - **Session cookie user** - Saves a session cookie so Users don't need to keep login in every time they re-open the website and also keeps their cart information and cart products saved on the cookie in case they need to stop in the middle of the product hunt to do something else.
 
-- **A** - 
+- **Delivery Information Save** - User can save his delivery information if he wants to purchase new products in the future using the same info.
 
-- **A** - 
+- **Order History** - Under the user profile page he can check and view information about all his past orders.
 
 # Technologies Used
 
@@ -435,22 +431,6 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
     6. On the the collapsible bar made sure that the Search, Cart, and My Account are working as expected and that the total cart price is also updated.
 
--   ### Testing :
-    1. Tested the 
-
-    2. Tested the 
-
-    3. Tested required 
-
-    4. Tested the Link 
-
--   ### Testing :
-    1. Made sure the 
-
-    2. Tested the 
-
-    3. Tested the 
-
 ## Bugs and Fixes
 
 1. After adding the search functionality every time I was searching for anything it was displaying all the products.
@@ -468,15 +448,6 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 4. After I deleted a product on Django Admin panel to perform a test the entire website started returning a 404 with the error message `RelatedObjectDoesNotExist at /admin/login/`
     - 4.1 **Fix:** After trying several times to close and start the python server and also shutting off and opening again the workspace on gitpod I found that the issue was with the session cookies. After clearing all the cookies I manage to see the website again without the products that I have deleted.
-
-5. 
-    - 5.1: **Fix:** 
-
-6. 
-    - 6.1 **Fix:** 
-
-7. 
-   - 7.1 **Fix** 
 
 # Deployment
 
@@ -548,23 +519,21 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 # Credits
 
-- [w](https://) -
+- [Code Institute Course](https://codeinstitute.net/) helping on setuping up the e-commerce store.
 
-- [W](https://) - 
+- [Font Awesome](https://fontawesome.com/icons) for the huge collection of free icons they offer.
 
-- [C](https://) - 
+- [Web Formatter](https://webformatter.com/) Used for formatting HTML, CSS and Javascript and also to check for errors.
+
+- [Google Fonts:](https://fonts.google.com/) Thanks to Google for providing this huge amount of free fonts on the site.
+
+- [Bootstrap](https://getbootstrap.com) for the large and free libraries 
 
 - [M](https://) - 
 
 - [G](https://) - 
 
 - [G](https://) - 
-
-## Code
-
-- [M](https://) - 
-
-- [w](https://) - 
 
 ## Content
 
@@ -576,4 +545,8 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 ## Acknowledgements
 
-- 
+- My mentor Akshat for all his help and ideas.
+
+- Thanks to the tutors at Code Institute for all help during the course.
+
+- Slack channel help regarding ongoingissues and problem solving ideas.
