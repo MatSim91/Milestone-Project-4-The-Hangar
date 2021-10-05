@@ -198,6 +198,97 @@ A brief overview of the languages, frameworks, and other tools I've used on this
 
 ## Database
 
+- Using Django SQL databases on the development envirotnmnt and in Heroku I have used a PostgreSQL database for deployment.
+
+### Product App
+
+`Product` model
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Product id | id | primary_key=True | AutoField
+|Category|category|null=True, blank=True, on_delete=models.SET_NULL|ForeignKey
+|Type|type|null=True, blank=True, on_delete=models.SET_NULL|ForeignKey
+|Manufacturer|manufacturer|null=True, blank=True, on_delete=models.SET_NULL|ForeignKey
+|Name | name | max_length=30 | CharField
+|Description | content | blank=False | TextField
+|Price | price | max_digits=20, decimal_places=2 | DecimalField
+|Image URL| image_url| max_length=1024, null=True, blank=True | URLField
+|Image | image | null=True, blank=True | ImageField
+
+`Category` model
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Category id | id | primary_key=True | AutoField
+|Name | name | max_length=50 | CharField
+|Friendly Name | friendly_name | max_length=50, null=False, blank=False | CharField
+
+`Manufacturer` model
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Manufacturer id | id | primary_key=True | AutoField
+|Name | name | max_length=50, null=False, blank=False | CharField
+|Country | country | max_length=50, null=False, blank=False | CharField
+
+`Type` model
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Type id | id | primary_key=True | AutoField
+|Name | name | max_length=50, null=False, blank=False | CharField
+|Friendly Name | friendly_name | max_length=254, null=False, blank=False | CharField
+|Thrust | thrust | max_length=30 | CharField
+
+
+### Checkout App
+
+`Order` model
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Order id | id | primary_key=True | AutoField
+|Order Number | order_number | max_length=32, null=False, editable=False | CharField
+|Full Name | full_name | max_length=50, null=False, blank=False | CharField
+|User Profile | user_profile | on_delete=models.SET_NULL, null=True, blank=True | ForeignKey
+|Email | email | max_length=254, null=False, blank=False | EmailField
+|Phone Number | phone_number | max_length=20, null=False, blank=False | CharField
+|Country | country | null=False, blank=False | CountryField
+|Postcode | postcode | max_length=20, null=True, blank=True | CharField
+|City | town_or_city | max_length=40, null=False, blank=False | AutoField
+|Street Address 1 | street_address1 | max_length=80, null=False, blank=False | CharField
+|Street Address 2 | street_address2 | max_length=80, null=False, blank=False | CharField
+|County | county | max_length=80, null=True, blank=True | CharField
+|Date | date | auto_now_add=True | DateTimeField
+|Delivery Cost | delivery_cost | max_digits=6, decimal_places=2, null=False, default=0 | DecimalField
+|Order Total | order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+|Grand Total | grand_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+|Original Cart | original_cart | null=False, blank=False, default='' | TextField
+|Stripe PID | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Order id | id | primary_key=True | AutoField
+|Order | order | null=False, blank=False, on_delete=models.CASCADE | ForeignKey
+|Product | product | null=False, blank=False, on_delete=models.CASCADE | ForeignKey
+|Quantity | quantity | null=False, blank=False | IntegerField
+|Line Item Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField
+
+### Profile App
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Order id | id | primary_key=True | AutoField
+|Order | user | on_delete=models.CASCADE | OneToOneField
+|Order | default_phone_number | max_length=20, null=True, blank=True | CharField
+|Order | default_country | null=True, blank=True | CountryField
+|Order | default_postcode | max_length=20, null=True, blank=True | CharField
+|Order | default_town_or_city | max_length=40, null=True, blank=True | CharField
+|Order | default_street_address1 | max_length=80, null=True, blank=True | CharField
+|Order | default_street_address2 | max_length=80, null=True, blank=True | CharField
+|Order | default_county | max_length=80, null=True, blank=True | CharField
+
 ## Testing User Stories
 
 -   ### First Time Visitor Goals
